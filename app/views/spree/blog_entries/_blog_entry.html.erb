@@ -1,7 +1,7 @@
 <h2><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
+<%= image_tag(@blog_entry.blog_entry_image.attachment(:banner))%>
 
 <div class="blog_entry_summary">
-  <%= image_tag(@blog_entry.blog_entry_image(:banner))%>
   <%== blog_entry.entry_summary %>
   <span class="blog_read_more"><%= link_to Spree.t(:blog_read_more), blog_entry_permalink(blog_entry) %></span>
 </div>
