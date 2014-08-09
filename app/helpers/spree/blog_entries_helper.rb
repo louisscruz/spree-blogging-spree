@@ -33,5 +33,8 @@ module Spree
     def blog_entry_category_list_html blog_entry
       blog_entry.category_list.map {|category| link_to category, blog_category_path(category) }.join(", ").html_safe
     end
+
+    def blog_entry_image
+    end
   end
 end
