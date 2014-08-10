@@ -48,4 +48,7 @@ Spree::HomeController.class_eval do
       @pagination_page = params[:page].to_i > 0 ? params[:page].to_i : 1
       @pagination_per_page = params[:per_page].to_i > 0 ? params[:per_page].to_i : 10
     end
+    
+  end
+
 end
