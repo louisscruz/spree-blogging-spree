@@ -40,13 +40,12 @@ Spree::HomeController.class_eval do
     @blog_entries = Spree::BlogEntry.visible.by_author(@author).page(@pagination_page).per(@pagination_per_page)
   end
 
-  def
+  def blog_entry_image
+  end
 
   private
-
     def init_pagination
       @pagination_page = params[:page].to_i > 0 ? params[:page].to_i : 1
       @pagination_per_page = params[:per_page].to_i > 0 ? params[:per_page].to_i : 10
     end
-
 end
