@@ -40,6 +40,8 @@ Spree::HomeController.class_eval do
     @blog_entries = Spree::BlogEntry.visible.by_author(@author).page(@pagination_page).per(@pagination_per_page)
   end
 
+  def
+
   private
 
     def init_pagination
