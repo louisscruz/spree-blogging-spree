@@ -1,5 +1,5 @@
 <h2><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
-<%= link_to image_tag(@blog_entry.blog_entry_image.attachment.url(:banner)) %>
+<%= image_tag(blog_entry.blog_entry_image.attachment.url(:banner)) %>
 
 <div class="blog_entry_summary">
   <%== blog_entry.entry_summary %>
