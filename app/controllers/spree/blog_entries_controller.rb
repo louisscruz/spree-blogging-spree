@@ -6,7 +6,6 @@ class Spree::BlogEntriesController < Spree::StoreController
 
   def index
     @blog_entries = Spree::BlogEntry.visible.page(@pagination_page).per(@pagination_per_page)
-    @blog_entry_image = Spree::BlogEntryImage
   end
 
   def show
