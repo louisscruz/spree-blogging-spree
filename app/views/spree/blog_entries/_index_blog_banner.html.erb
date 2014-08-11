@@ -1,5 +1,5 @@
-<%= image_tag(blog_entry.blog_entry_image.attachment.url(:banner)) %>
-<div class="container">
+
+<div class="container" style="background-image: url('<%= image_tag(blog_entry.blog_entry_image.attachment.url(:banner)) %>');">
   <div class="columns sixteen blog_content">
     <h2 class="banner_title"><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
 
