@@ -1,6 +1,6 @@
-Deface::Override.new(:virtual_path => "spree/home/index",
+Deface::Override.new(:virtual_path => "spree/shared/_header",
                      :name => "blog_entries_index",
-                     :insert_after => "h2") do
+                     :insert_after => "#header") do
       "<% if !@blog_entries.empty? %>
         <ul id='blog_entry_entries'>
           <% @blog_entries.each do |blog_entry| %>
