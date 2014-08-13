@@ -12,7 +12,6 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
               <% end %>
             </ul>
           </div>
-          <%= paginate @blog_entries %>
         <% else %>
           <p id='no_entries'><%= Spree.t(:no_blog_entries) %></p>
         <% end %>
