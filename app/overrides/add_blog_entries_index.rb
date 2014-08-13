@@ -5,7 +5,7 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
         <% if !@blog_entries.empty? %>
           <div class='index_banner'>
             <ul id='blog_entry_entries'>
-              <% @blog_entries.last(1) do |blog_entry| %>
+              <% @blog_entries.each do |blog_entry| %>
                 <li>
                   <%= render :partial => 'spree/blog_entries/index_blog_banner', :locals => {:blog_entry => blog_entry} %>
                 </li>
