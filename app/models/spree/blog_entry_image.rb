@@ -4,9 +4,10 @@ class Spree::BlogEntryImage < Spree::Image
        :mini => '48x48#',
        :normal => '200x200>',
        :large => '600x600>',
-       :banner => '2800x600#'},
+       :banner => ['2800x600#',  :jpg, :quality => 60]
+     },
      :convert_options => {
-       :banner => '-quality 30'
+       :banner => '-set colorspace sRGB -strip -sharpen 0x0.5'
      },
      :default_style => :banner,
      :url => "/assets/blog_entry_images/:id/:style/:basename.:extension",
