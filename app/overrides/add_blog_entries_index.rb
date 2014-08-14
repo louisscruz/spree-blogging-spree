@@ -11,6 +11,10 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
                 </li>
               <% end %>
             </ul>
+
+            <div class='outside'>
+              <p><span id='slider-prev' class='fa fa-chevron-circle-left'></span> | <span id='slider-next' class='fa fa-chevron-circle-right'></span></p>
+            </div>
           </div>
         <% else %>
           <p id='no_entries'><%= Spree.t(:no_blog_entries) %></p>
