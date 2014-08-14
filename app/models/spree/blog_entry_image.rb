@@ -1,12 +1,13 @@
 class Spree::BlogEntryImage < Spree::Image
   has_attached_file :attachment,
      :styles => {
-       :mini => '48x48#',
-       :normal => '200x200>',
-       :large => '600x600>',
-       :banner => ['2800x600#',  :jpg, :quality => 60]
+       :mini => '96x96#',
+       :normal => '400x400#',
+       :banner_half => ['1400x300>',   :jpg, :quality => 60],
+       :banner => ['2800x600>',        :jpg, :quality => 60]
      },
      :convert_options => {
+       :banner_half => '-set colorspace sRGB -strip -sharpen 0x0.5',
        :banner => '-set colorspace sRGB -strip -sharpen 0x0.5'
      },
      :default_style => :banner,
