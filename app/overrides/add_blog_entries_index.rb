@@ -13,7 +13,8 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
             </ul>
 
             <div class='outside'>
-              <i><span id='slider-prev' class='fa fa-chevron-circle-left'></span> | <span id='slider-next' class='fa fa-chevron-circle-right'></span></i>
+              <span id='slider-prev'><i class='fa fa-chevron-circle-left'></i></span>
+              <span id='slider-next'><i class='fa fa-chevron-circle-right'></i></span>
             </div>
           </div>
         <% else %>
