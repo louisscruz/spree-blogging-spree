@@ -1,4 +1,11 @@
-<div class="banner_image" style="background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner) %>')">
+<div class="banner_image" media="(min-width: 1025)" style="background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
+                                                           background-size: 1400px 300px;')"></div>
+<div class="banner_image" media="(min-width: 769)" style="background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
+                                                          background-size: 1024px 300px;')"></div>
+<div class="banner_image" media="(min-width: 569)" style="background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
+                                                          background-size: 768px 300px;')"></div>
+
+
 <div class="container">
   <div class="columns sixteen blog_content">
     <h2 class="banner_title"><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
