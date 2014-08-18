@@ -2,9 +2,9 @@
     .entry_banner {
       height: 300px;
       width: 100%;
-      background-position: center;
+      background-position: center top;
       background-repeat: no-repeat;
-      background-image: url('<%= @blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
+      background-image: url('<%= @blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
       background-size: 568px 240px;
     }
     @media only screen and (max-width: 568px) {
