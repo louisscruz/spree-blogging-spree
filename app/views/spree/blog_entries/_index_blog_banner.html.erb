@@ -7,31 +7,30 @@
       background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
       background-size: 1400px 300px;
     }
-    @media only screen and (min-width: 769) {
+    @media only screen and (max-width: 768px) {
       .banner_image {
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
         background-size: 1024px 300px;
       }
     }
-    @media only screen and (min-width: 569) {
+    @media only screen and (max-width: 568px) {
       .banner_image {
-        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
         background-size: 768px 300px;
       }
     }
-  </style>
+</style>
 
-<div class="banner_image"></div>
+<div class="banner_image">
 
+  <div class="container">
+    <div class="columns sixteen blog_content">
+      <h2 class="banner_title"><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
 
-<div class="container">
-  <div class="columns sixteen blog_content">
-    <h2 class="banner_title"><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
-
-    <div class="blog_entry_summary">
-      <%== blog_entry.entry_summary %>
-      <span class="blog_read_more"><%= link_to Spree.t(:blog_read_more), blog_entry_permalink(blog_entry) %></span>
+      <div class="blog_entry_summary">
+        <%== blog_entry.entry_summary %>
+        <span class="blog_read_more"><%= link_to Spree.t(:blog_read_more), blog_entry_permalink(blog_entry) %></span>
+      </div>
     </div>
-
   </div>
 </div>
