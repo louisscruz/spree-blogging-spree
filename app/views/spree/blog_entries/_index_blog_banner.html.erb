@@ -1,3 +1,26 @@
+<style type="text/css">
+    .banner_image {
+      height: 300px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
+      background-size: 1400px 300px;
+    }
+    @media only screen and (min-width: 769) {
+      .banner_image {
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
+        background-size: 1024px 300px;
+      }
+    }
+    @media only screen and (min-width: 569) {
+      .banner_image {
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
+        background-size: 768px 300px;
+      }
+    }
+  </style>
+
 <div class="banner_image"></div>
 
 
