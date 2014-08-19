@@ -1,6 +1,6 @@
-<div class="banner_image_<%= blog_entry.title %>">
+<div class="banner_image_<%= blog_entry.attributes['id'] %>">
   <style type="text/css">
-    .banner_image_<%= blog_entry.title %> {
+    .banner_image_<%= blog_entry.attributes['id'] %> {
       height: 300px;
       width: 100%;
       background-position: center;
@@ -9,26 +9,26 @@
       background-size: 1400px 300px;
     }
     @media only screen and (max-width: 1024px) {
-      .banner_image_<%= blog_entry.title %> {
+      .banner_image_<%= blog_entry.attributes['id'] %> {
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
         background-size: 1024px 300px;
       }
     }
     @media only screen and (max-width: 768px) {
-      .banner_image_<%= blog_entry.title %> {
+      .banner_image_<%= blog_entry.attributes['id'] %> {
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
         background-size: 768px 300px;
       }
     }
     @media only screen and (max-width: 568px) {
-      .banner_image_<%= blog_entry.title %> {
+      .banner_image_<%= blog_entry.attributes['id'] %> {
         height: 240px;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
         background-size: 568px 240px;
       }
     }
     @media only screen and (max-width: 480px) {
-      .banner_image_<%= blog_entry.title %> {
+      .banner_image_<%= blog_entry.attributes['id'] %> {
         height: 240px;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
         background-size: 480px 240px;
