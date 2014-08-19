@@ -1,7 +1,7 @@
 <style type="text/css">
     .entry_banner_<%= blog_entry.attributes['id'] %> {
       height: 240px;
-      width: 568px;
+      width: 100%;
       background-position: left-top;
       background-repeat: no-repeat;
       background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
@@ -11,7 +11,6 @@
     only screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-width: 769px) and (min-resolution: 192dpi) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
-        background-position: center top;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small2x) %>');
         background-size: 1136px 480px;
       }
@@ -28,6 +27,7 @@
     }
     @media only screen and (max-width: 768px) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
+        width: 100%;
         background-position: center top;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
         background-size: 480px 240px;
