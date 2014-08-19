@@ -7,6 +7,15 @@
       background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
       background-size: 568px 240px;
     }
+    @media
+    only screen and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 568px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini2x) %>');
+        background-size: 960px 480px;
+      }
+    }
     @media only screen and (max-width: 568px) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
         background-position: center top;

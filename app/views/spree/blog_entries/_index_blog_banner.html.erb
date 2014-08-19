@@ -8,10 +8,37 @@
       background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_full) %>');
       background-size: 1400px 300px;
     }
+    @media
+    only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-width: 1025px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_full2x) %>');
+        background-size: 2800px 600px;
+      }
+    }
+    @media
+    only screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 1024px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large2x) %>');
+        background-size: 2048px 600px;
+      }
+    }
     @media only screen and (max-width: 1024px) {
       .banner_image_<%= blog_entry.attributes['id'] %> {
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
         background-size: 1024px 300px;
+      }
+    }
+    @media
+    only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 768px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium2x) %>');
+        background-size: 1536px 600px;
       }
     }
     @media only screen and (max-width: 768px) {
@@ -20,11 +47,29 @@
         background-size: 768px 300px;
       }
     }
+    @media
+    only screen and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 568px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small2x) %>');
+        background-size: 1136px 480px;
+      }
+    }
     @media only screen and (max-width: 568px) {
       .banner_image_<%= blog_entry.attributes['id'] %> {
         height: 240px;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
         background-size: 568px 240px;
+      }
+    }
+    @media
+    only screen and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 568px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini2x) %>');
+        background-size: 960px 480px;
       }
     }
     @media only screen and (max-width: 480px) {
