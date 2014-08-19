@@ -1,5 +1,5 @@
 <style type="text/css">
-    .entry_banner {
+    .entry_banner_<%= blog_entry.attributes['id'] %> {
       height: 300px;
       width: 100%;
       background-position: center top;
@@ -8,7 +8,7 @@
       background-size: 768px 300px;
     }
     @media only screen and (max-width: 568px) {
-      .entry_banner {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
         background-image: url('<%= @blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
         background-size: 480px 240px;
       }
@@ -17,7 +17,7 @@
 
 <div id="blog_entry_container">
   <div id="blog_entry_entry">
-    <div class="entry_banner">
+    <div class="entry_banner_<%= blog_entry.attributes['id'] %>">
       <h1><%= @blog_entry.title %></h1>
     </div>
 
