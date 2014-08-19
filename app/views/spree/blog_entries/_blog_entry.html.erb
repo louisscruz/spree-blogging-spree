@@ -1,7 +1,7 @@
 <style type="text/css">
     .entry_banner_<%= blog_entry.attributes['id'] %> {
-      height: 300px;
-      width: 100%;
+      height: 240px;
+      width: 568px;
       background-position: left-top;
       background-repeat: no-repeat;
       background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
@@ -12,12 +12,23 @@
     only screen and (max-width: 568px) and (min-resolution: 192dpi) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
         background-position: center top;
+        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small2x) %>');
+        background-size: 1136px 480px;
+      }
+    }
+    @media
+    only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 480px) and (min-resolution: 192dpi) {
+      .entry_banner_<%= blog_entry.attributes['id'] %> {
+        width: 100%;
+        background-position: center top;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini2x) %>');
         background-size: 960px 480px;
       }
     }
-    @media only screen and (max-width: 568px) {
+    @media only screen and (max-width: 480px) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
+        width: 100%;
         background-position: center top;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
         background-size: 480px 240px;
@@ -26,7 +37,7 @@
 </style>
 
 <%= link_to blog_entry_permalink(blog_entry) do %>
-  <div class="entry_banner_<%= blog_entry.attributes['id'] %>">
+  <div class="entry_link entry_banner_<%= blog_entry.attributes['id'] %>">
     <h2 class="banner_title"><%= blog_entry.title %></h2>
   </div>
 <% end %>
