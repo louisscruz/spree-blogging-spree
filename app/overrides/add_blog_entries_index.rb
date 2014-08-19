@@ -7,7 +7,8 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
             <ul id='blog_entry_entries' class='bxslider'>
               <% @blog_entries.each do |blog_entry| %>
                 <li>
-                  <%= render :partial => 'spree/blog_entries/index_blog_banner', :locals => {:blog_entry => blog_entry}, :style => '
+                  <%= render :partial => 'spree/blog_entries/index_blog_banner', :locals => {:blog_entry => blog_entry} %>
+                    <style>
                       .banner_image {
                         height: 300px;
                         width: 100%;
@@ -42,7 +43,7 @@ Deface::Override.new(:virtual_path => "spree/shared/_header",
                           background-size: 480px 240px;
                         }
                       }
-                  ' %>
+                    </style>
                 </li>
               <% end %>
             </ul>
