@@ -1,45 +1,45 @@
-<style type="text/css">
-    .banner_image {
-      height: 300px;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_full) %>');
-      background-size: 1400px 300px;
-    }
-    @media only screen and (max-width: 1024px) {
-      .banner_image {
-        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
-        background-size: 1024px 300px;
-      }
-    }
-    @media only screen and (max-width: 768px) {
-      .banner_image {
-        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
-        background-size: 768px 300px;
-      }
-    }
-    @media only screen and (max-width: 568px) {
-      .banner_image {
-        height: 240px;
-        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
-        background-size: 568px 240px;
-      }
-    }
-    @media only screen and (max-width: 480px) {
-      .banner_image {
-        height: 240px;
-        background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
-        background-size: 480px 240px;
-      }
-    }
-</style>
-
 <div class="banner_image">
 
   <div class="container">
     <div class="columns sixteen blog_content">
       <h2 class="banner_title"><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
+
+      <style type="text/css">
+          .banner_image {
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_full) %>');
+            background-size: 1400px 300px;
+          }
+          @media only screen and (max-width: 1024px) {
+            .banner_image {
+              background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_large) %>');
+              background-size: 1024px 300px;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            .banner_image {
+              background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_medium) %>');
+              background-size: 768px 300px;
+            }
+          }
+          @media only screen and (max-width: 568px) {
+            .banner_image {
+              height: 240px;
+              background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_small) %>');
+              background-size: 568px 240px;
+            }
+          }
+          @media only screen and (max-width: 480px) {
+            .banner_image {
+              height: 240px;
+              background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini) %>');
+              background-size: 480px 240px;
+            }
+          }
+      </style>
 
       <div class="blog_entry_summary">
         <%== blog_entry.entry_summary %>
