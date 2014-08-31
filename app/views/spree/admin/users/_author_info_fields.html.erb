@@ -5,6 +5,16 @@
       <%= f.text_field :nickname, :class => 'fullwidth' %>
       <%= error_message_on :user, :nickname %>
     <% end %>
+    <%= f.field_container :first_name do %>
+      <%= f.label :first_name, Spree.t(:first_name) %>
+      <%= f.text_field :first_name, :class => 'fullwidth' %>
+      <%= error_message_on :user, :first_name %>
+    <% end %>
+    <%= f.field_container :last_name do %>
+      <%= f.label :last_name, Spree.t(:last_name) %>
+      <%= f.text_field :last_name, :class => 'fullwidth' %>
+      <%= error_message_on :user, :last_name %>
+    <% end %>
     <%= f.field_container :website_url do %>
       <%= f.label :website_url, Spree.t(:website_url) %>
       <%= f.text_field :website_url, :class => 'fullwidth' %>
