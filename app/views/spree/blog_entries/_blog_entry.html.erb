@@ -20,7 +20,7 @@
     only screen and (max-width: 768px) and (min-resolution: 192dpi) {
       .entry_banner_<%= blog_entry.attributes['id'] %> {
         width: 100%;
-        background-position: center top;
+        background-position: left-top;
         background-image: url('<%= blog_entry.blog_entry_image.attachment.url(:banner_mini2x) %>');
         background-size: 480px 240px;
       }
